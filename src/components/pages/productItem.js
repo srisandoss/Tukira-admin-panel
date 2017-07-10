@@ -23,6 +23,8 @@ class ProductItem extends React.Component {
                 return cart._id === _id;
             })
 
+            console.log("SR::: cartIndex: ", cartIndex);
+
             //IF RETURNS -1 THERE ARE NO ITEMS WITH SAME ID
             if (cartIndex === -1) {
                 this.props.addToCart(product);
@@ -35,7 +37,6 @@ class ProductItem extends React.Component {
         } else {
             this.props.addToCart(product);
         }
-        this.props.addToCart(product);
     }
     render() {
         return(

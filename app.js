@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 
 //PROXY
-var httpProxy = require("http-proxy");
+var httpProxy = require('http-proxy');
 
 var app = express();
 
@@ -22,10 +22,8 @@ app.use('/api', function(req, res) {
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-app.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "public", "index.html"))
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
 
 // catch 404 and forward to error handler

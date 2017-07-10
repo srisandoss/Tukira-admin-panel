@@ -6,7 +6,7 @@ var productsSchema = mongoose.Schema({
     name: String,
     description: String,
     images: String,
-    acutalprice: Number
+    actualprice: Number
 });
 
 var Products = mongoose.model('Products', productsSchema);
